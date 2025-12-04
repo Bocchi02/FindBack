@@ -25,7 +25,7 @@ export default function MyListings() {
 
   const markReturned = async (id) => {
     try {
-      await axios.patch(`http://localhost:5000/api/items/${id}`);
+      await axios.patch(`/api/items/${id}`);
       load();
     } catch (err) {
       alert("Failed to update item status.");
@@ -39,7 +39,7 @@ export default function MyListings() {
       )
     ) {
       try {
-        await axios.delete(`http://localhost:5000/api/items/${id}`);
+        await axios.delete(`/api/items/${id}`);
         load();
       } catch (err) {
         alert("Failed to delete item.");
@@ -101,7 +101,7 @@ export default function MyListings() {
                           >
                             {i.image ? (
                               <img
-                                src={`http://localhost:5000/uploads/${i.image}`}
+                                src={`/uploads/${i.image}`}
                                 className="w-100 h-100"
                                 style={{ objectFit: "cover" }}
                                 alt="item"
