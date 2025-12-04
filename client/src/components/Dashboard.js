@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Charts from "./Charts";
 
-const API = "http://localhost:5000/api/dashboard";
+const API = "/api/dashboard";
 
 export default function Dashboard() {
   const [data, setData] = useState(null);

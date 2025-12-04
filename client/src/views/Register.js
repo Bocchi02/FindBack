@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-const API = "http://localhost:5000/api/auth/register";
+const API = "/api/auth/register";
 
 export default function Register() {
   const navigate = useNavigate();

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const LOGIN_API = "http://localhost:5000/api/auth/login";
+const LOGIN_API = "/api/auth/login";
 
 export default function Login({ onLogin }) {
   const [form, setForm] = useState({ email: "", password: "" });

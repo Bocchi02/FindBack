@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const API = "http://localhost:5000/api/items/others";
+const API = "/api/items/others";
 
 export default function BrowseLost() {
   const [items, setItems] = useState([]);
@@ -77,7 +77,7 @@ export default function BrowseLost() {
                   >
                     {i.image ? (
                       <img
-                        src={`http://localhost:5000/uploads/${i.image}`}
+                        src={`/uploads/${i.image}`}
                         className="w-100 h-100"
                         style={{ objectFit: "cover" }}
                         alt="item"
@@ -193,7 +193,7 @@ export default function BrowseLost() {
                       >
                         {selectedItem.image ? (
                           <img
-                            src={`http://localhost:5000/uploads/${selectedItem.image}`}
+                            src={`uploads/${selectedItem.image}`}
                             className="w-100 h-100"
                             style={{ objectFit: "cover" }}
                             alt="item"
